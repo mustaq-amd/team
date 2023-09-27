@@ -24,7 +24,6 @@
         padding: 20px;
         text-align: center;
         transition: transform 0.2s;
-
       }
 
       .card:hover {
@@ -48,9 +47,19 @@
       .card-2 {
         width: 200%;
       }
+      .match-updates {
+        text-align: center;
+        color: darkolivegreen;
+        font-weight: 900;
+      }
     </style>
   </head>
   <body>
+    <div class="match-updates">
+      <p>Mighty Striker vs Opponent Team</p>
+      <p>Date : 28-09-2023</p>
+      <p>Time : 6 AM</p>
+    </div>
     <div class="card-container" id="card-container">
       <!-- Cards will be appended here -->
     </div>
@@ -87,7 +96,7 @@
             'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
           Role: 'Batsman',
         },
-         {
+        {
           Name: 'Swami',
           imageUrl:
             'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
@@ -122,7 +131,7 @@
           imageUrl:
             'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
           Role: 'Bowler',
-        }
+        },
       ];
 
       // Get a reference to the card container
