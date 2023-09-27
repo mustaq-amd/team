@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Cards</title>
+    <style>
+      /* CSS styles for cards */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s;
+
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .card h2 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+      }
+
+      .card p {
+        color: #888;
+      }
+      .card-2 {
+        width: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container" id="card-container">
+      <!-- Cards will be appended here -->
+    </div>
+
+    <script>
+      const team = [
+        {
+          Name: 'Shabbir (c)',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+        {
+          Name: 'Mustaq (wk)',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+        {
+          Name: 'Afridi',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Bowler',
+        },
+        {
+          Name: 'Gouse',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Bowler',
+        },
+        {
+          Name: 'Guggullu',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Bowler',
+        },
+        {
+          Name: 'Sallu',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+        {
+          Name: 'Narayana',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+        {
+          Name: 'Shahbaz',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+        {
+          Name: 'Kokki',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+        {
+          Name: 'Pampa',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'All Rounder',
+        },
+        {
+          Name: 'Swami',
+          imageUrl:
+            'https://raw.githubusercontent.com/mustaq-amd/team/main/MSlogo.jpg',
+          Role: 'Batsman',
+        },
+      ];
+
+      // Get a reference to the card container
+      const cardContainer = document.getElementById('card-container');
+
+      // Generate and append cards using map
+      const cardsHTML = team.map((member) => {
+        return `
+          <div class="card">
+            <div class="card-1">
+                <img src="${member.imageUrl}" >
+            </div>
+            <div class="card-2">
+                <h2>${member.Name}</h2>
+                <p>${member.Role}</p>
+            </div>
+          </div>
+        `;
+      });
+
+      cardContainer.innerHTML = cardsHTML.join('');
+    </script>
+  </body>
+</html>
